@@ -1,0 +1,33 @@
+.box{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    animation-name: square;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    an
+
+   /* transition-duration:3s;
+
+   /*transition-duration:3s;
+    transition-timing-function: ease-in;*/
+}
+.box:hover
+{
+    transform: translateX(-40px);
+
+    border-radius: 60px;
+    background-color: blue;
+}
+@keyframes square{
+    0%{
+        transform: translateX(-40px);
+    }
+    100%{
+        transform: translateX(80px);
+    }
+
+}

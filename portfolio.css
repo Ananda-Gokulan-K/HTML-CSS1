@@ -1,0 +1,457 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding:6rem;
+}
+body{
+    background-image: white;
+}
+
+
+*{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+i{
+    color:blue;
+}
+/*navbar*/
+.navbar a
+{
+font-size: 22px;
+color: black;
+text-decoration: none;
+margin-left: 70px;
+}
+.navbar{
+animation-name: navbarani;
+animation-duration: 0.8s;
+animation-fill-mode: forwards;
+}
+@keyframes navbarani{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.navbar a:hover{
+    transition: 0.25s;
+    color:blue;
+}
+.self button,nav button{
+    background-color: blue;
+    font-weight: bolder;
+    color: white;
+    width: 120px;
+    height: 30px;
+    border: none;
+    float: center;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 1px black;
+}
+/*.box{
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    background-color: red;
+   /* transition-duration:3s;
+   /*transition-duration:3s;
+    transition-timing-function: ease-in;
+}*/
+.self button:hover,nav button:hover{
+    background-color: transparent;
+    color: black;
+    border:2px solid black;
+}
+nav{
+    margin-left: 300px;
+    }
+/*navbar*/
+
+
+
+/* my image*/
+.myimg img{
+    width: 250px;
+    height: 290px;
+    margin-left: 70px;
+    margin-top: 50px;
+    border-radius: 100px;  
+}
+{
+    animation-name: anand;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes anand{
+    0%{
+        transform: translateY(3px);
+    } 10%{
+        transform: translateY(2px);
+    } 20%{
+        transform: translateY(1px);
+    } 30%{
+        transform: translateY(0px);
+    } 40%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(-2px);
+    }60%{
+        transform: translateY(-3px);
+    }70%{
+        transform: translateY(-2x);
+    }80%{
+        transform: translateY(-1px);
+    }90%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(1px);
+    }
+}
+/* my image*/
+
+/* about me*/
+.abtme{
+    margin-left: 120px;
+    text-transform:uppercase;
+    animation-name: edani;
+    animation-duration: 2s;
+    transition: 2s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    
+}
+.about-me{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 120px;
+    animation-name: edani;
+    animation-duration: 2s;
+    transition: 2s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+}
+.about-content{
+    border:2px solid white;
+    height: 700px;
+    width: 600px;
+}
+
+/* skills*/
+.skills{
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+}
+.skill{
+    font-weight:bolder;
+    color: blue;
+}
+.line{
+    margin-left: 20px;
+    height: 5px;
+    width:250px;
+    background-color: black;
+    margin-left: 20px;
+    border-radius: 20px;
+    transform-origin: left;
+}
+.perc{
+    background: aqua;
+    position: relative;
+    height: 5px;
+    animation-name: fillbar;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+.skillname{
+   margin-top: 70px;
+}
+@keyframes fillbar{
+    from{
+        width:0px;
+    }
+    to{
+        width:100%;
+    }
+}
+.perc::before{
+    content: attr(per);
+    right: 0;
+    height:20px;
+    z-index: 1;
+    top:-25px;
+    position: absolute;
+    width: 40px;
+    text-align: center;
+    color: white;
+    background-color:black;
+}
+.perc::after{
+    content: "";
+    height:10px;
+    width:10px;
+    z-index: 0;
+    top:-17px;
+    right: 7.5;
+    position: absolute;
+    border: 2px solid black;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+/* skills*/
+
+
+/* about me*/
+
+/*education*/
+.edu_header{
+    animation-name: edani;
+    animation-duration: 2s;
+    transition: 2s;
+    animation-fill-mode: both;
+}
+.edtab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation-name: edani;
+    animation-duration: 2s;
+    transition: 2s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+}
+.editems{
+    margin-top: 20px;
+    border: 2px solid blue;
+    border-radius: 20px;
+    height: 120px;
+    width: 500px;
+    text-align:center;
+    animation-name: edani;
+    animation-duration: 2s;
+    transition: 2s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+}
+.editems1{
+    margin-top: 20px;
+    border: 2px solid blue;
+    border-radius: 20px;
+    height: 410px;
+    width: 500px;
+    text-align:center;
+    animation-name: edani1;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    transition: 2s;
+    animation-fill-mode: both;
+    animation-timeline: view();
+}
+
+   .editems1:hover{
+        border: 4px solid red;
+        transition: 0.2s;
+        transform:translateY(-10px);
+    }
+    .editems:hover{
+    border: 4px solid red;
+    transition: 0.3s;
+    transform:translateY(-10px);
+}
+@keyframes edani{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes edani1{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/*education*/
+
+.self{
+    margin-left: 150px;
+    margin-top: 50px;
+    display:flex;
+    flex-direction: row;
+}
+.self1{
+    animation-name: left;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes left{
+    0%{
+        transform: translateX(-200px);
+    }
+    100%{
+        transform: translateX(80px);
+    }
+}
+.intro{
+    margin-left: 300px;
+    box-sizing: border-box;
+    border:2px solid white;
+    border-radius: 10px;
+    width:330px;
+    height:360px;
+    animation-name: right;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes right{
+    0%{
+        transform: translateX(160px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.job{
+    color:rgb(67, 65, 65);
+}
+.job:hover{
+    color:brown;
+    cursor:default;
+}
+.edu_header{
+    margin-left: 120px;margin-top: 230px;
+}
+
+.contact{
+    margin-top: 130px;
+    width: 500px;
+    height: 500px;
+    border-radius: 30px;
+    animation-name: conani;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-duration: 5s;
+}
+@keyframes conani{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+form input,textarea,button{
+    margin-left: 150px;
+}
+
+/*footer*/
+.footer{
+    background-color: black;
+    color: white;
+}
+.foot{
+    text-align: center;
+}
+.foot_flex{
+    display: flex;
+    justify-content:left;
+    text-align: center;
+}
+.touch{
+    margin-left: 30px;
+    font-size: 25px;
+    font-weight:400;
+    font-family:'Times New Roman', Times, serif;
+}
+.symbol{
+    margin-top: 4px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+
+/*footer*/
+
+.contact h2{
+    text-align: center;
+}
+.linkedin{
+    height:30px;
+    width:30px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.github{ height:20px;
+    width:20px;
+    margin-left: 15px;
+    margin-bottom: 15px;}
+form{
+    margin-left: 30px;
+}
+form button{
+    background-color: blue;
+    font-weight: bolder;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    float: center;
+    border-radius:20px;
+}
+form button:hover{opacity: 2;
+}
+.projects{
+    display:grid;
+    height:300px;
+    background-color: yellow;
+    grid-template-columns:repeat(3,1fr) ;
+    padding: 10px;
+
+}
+.items{
+     background-color: white;
+     border:2px solid black;
+}
+@media screen and (max-height:450px) {
+    .projects{
+        display:grid;
+        height:300px;
+        grid-template-columns:repeat(3,1fr) ;
+    
+    }
+    .items{
+        background-color: green;
+        border:2px solid black;
+   }
+}
+*{
+   
+    box-sizing: border-box;
+}
+
+
