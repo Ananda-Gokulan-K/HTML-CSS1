@@ -5,21 +5,52 @@ html{
 body{
     background-image: white;
 }
-
-
 *{
+   
+    list-style: none;
+ box-sizing: border-box;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 i{
     color:blue;
 }
 /*navbar*/
-.navbar a
-{
-font-size: 22px;
-color: black;
-text-decoration: none;
-margin-left: 70px;
+header{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 50px;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li a{
+    display: inline-block;
+    margin: 0;
+    font-size: 22px;
+    color: black;
+    text-decoration: none;
+    padding: 5px 0px;
+    margin: 0 10px;
+    transition: 0.5s;
+    border: 3px solid transparent;
+    text-transform:capitalize;
+}
+header nav ul li a:hover,header nav ul li a#home{
+    border-bottom-color: blue;
+    
+}
+.ham{
+    cursor: pointer;
+    display: none;
+}
+.ham div{
+    width:30px;
+    height: 3px;
+    margin: 5px 0;
+    background: black;
 }
 .navbar{
 animation-name: navbarani;
@@ -44,12 +75,13 @@ animation-fill-mode: forwards;
     font-weight: bolder;
     color: white;
     width: 120px;
-    height: 30px;
+    height: 40px;
     border: none;
     float: center;
     border-radius: 20px;
     box-shadow: 3px 3px 3px 1px black;
 }
+
 /*.box{
     border: 2px solid black;
     height: 300px;
@@ -64,18 +96,15 @@ animation-fill-mode: forwards;
     color: black;
     border:2px solid black;
 }
-nav{
-    margin-left: 300px;
-    }
+
+
 /*navbar*/
-
-
 
 /* my image*/
 .myimg img{
     width: 250px;
     height: 290px;
-    margin-left: 70px;
+    margin-left: 140px;
     margin-top: 50px;
     border-radius: 100px;  
 }
@@ -144,7 +173,6 @@ nav{
 .skills{
     display: flex;
     flex-direction: column;
-    margin-left: 120px;
 }
 .skill{
     font-weight:bolder;
@@ -219,6 +247,7 @@ nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     font-weight: bold;
     margin-bottom: 20px;
     animation-name: edani;
@@ -288,12 +317,17 @@ nav{
 /*education*/
 
 .self{
-    margin-left: 150px;
+
+    margin-left: 0px;
     margin-top: 50px;
     display:flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .self1{
+    padding: 5px;
     animation-name: left;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -304,18 +338,17 @@ nav{
         transform: translateX(-200px);
     }
     100%{
-        transform: translateX(80px);
+        transform: translateX(10px);
     }
 }
 .intro{
-    margin-left: 300px;
     box-sizing: border-box;
-    border:2px solid white;
+    border:2px solid none;
     border-radius: 10px;
     width:330px;
     height:360px;
     animation-name: right;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-fill-mode: forwards;
 }
 @keyframes right{
@@ -371,6 +404,7 @@ form input,textarea,button{
 /*footer*/
 .footer{
     background-color: black;
+    width: 100%;
     color: white;
 }
 .foot{
@@ -437,7 +471,7 @@ form button:hover{opacity: 2;
      background-color: white;
      border:2px solid black;
 }
-@media screen and (max-height:450px) {
+/* @media screen and (max-width:450px) {
     .projects{
         display:grid;
         height:300px;
@@ -450,8 +484,89 @@ form button:hover{opacity: 2;
    }
 }
 *{
-   
+   z-index:99;
     box-sizing: border-box;
+} */
+
+
+/*RESPONSIVE DESIGN*/
+
+/* @media screen and (max-width:600px){
+    nav{
+        flex-direction: column;
+        height: 370px;
+        align-items: left;
+        width:300px;
+        border:2px solid black;
+        background-color:rgb(2, 2, 68);
+        border-radius: 20px;
+    }
+    .navbar a{
+        color: white;
+        margin-top:20px;
+    }
+    nav button{
+        margin-left: 0px;
+    }
+   
+    
+} */
+@media screen and (max-width:900px){
+    header{padding:0 30px;}
+    
 }
-
-
+@media screen and (max-width:600px){
+    .editems{
+        height: 200px;
+        width: 200px;
+       }
+       .editems1{
+        height: 400px;
+        width: 350px;
+       }
+}
+@media screen and (max-width:700px){
+    .ham{
+        display: block;
+    }
+    header nav{
+        position: absolute;
+        left: 0;
+        top:70px;
+        width:100%;
+        left: -100%;
+        background: white;
+        padding: 30px;
+    }
+    
+    header nav ul{
+        display: block;
+        
+    }
+    header nav ul li a{
+        margin: 5px 0;
+    }
+    header #check:checked ~ nav{
+        left: 0;
+    }
+    form input,textarea,form button{
+        margin-left: 10px;
+    }
+  
+    .footer{
+        width:100%;
+    }
+    @keyframes right{
+        0%{
+            transform: translateX(160px);
+        }
+        100%{
+            transform: translateX(45px);
+        }
+    }
+    
+    .intro{
+        margin-left: 0px;
+    }
+}
+/*RESPONSIVE DESIGN*/

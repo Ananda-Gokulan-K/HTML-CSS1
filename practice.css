@@ -31,3 +31,35 @@
     height:10px;
     width: 20px;
 }
+<div class="dropdown">
+        <a href="portfolio.html">Home</a>
+        <a href="#education" class="ed">Education</a>
+        <a href="#">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href=""> <button>Download Resume</button></a>
+    </div>
+/*.dropdown{
+        display:flex;
+        float: right;
+        transition: 1s;
+        z-index: 0;
+        margin-top:50px;
+        right: 0px;
+        align-items: center;
+        font-size: 22px;
+        flex-direction: column;
+        color: black;
+        height: 300px;
+        width: 350px;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color:rgb(2, 2, 68);
+        backdrop-filter: blur(10px);
+    }
+    .dropdown a{
+        margin-top: 16px;
+        color:white;
+        text-decoration: none;
+        transition: 0.5s;
+    }
