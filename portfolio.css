@@ -8,10 +8,12 @@ body{
 }
 *{
    
+  
 list-style: none;
  box-sizing: border-box;
 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 i{
     color:blue;
 }
@@ -76,7 +78,7 @@ animation-fill-mode: forwards;
     transition: 0.25s;
     color:blue;
 }
-.self button,nav button{
+.self button,nav button,.contact button{
     background-color: blue;
     font-weight: bolder;
     color: white;
@@ -97,7 +99,7 @@ animation-fill-mode: forwards;
    /*transition-duration:3s;
     transition-timing-function: ease-in;
 }*/
-.self button:hover,nav button:hover{
+.self button:hover,nav button:hover,.contact button:hover{
     background-color: transparent;
     color: black;
     border:2px solid black;
@@ -284,11 +286,11 @@ animation-fill-mode: forwards;
     text-align:center;
     animation-name: edani1;
     animation-duration: 2s;
-    animation-fill-mode: both;
     transition: 2s;
     animation-fill-mode: both;
     animation-timeline: view();
 }
+
 
    .editems1:hover{
         border: 4px solid red;
@@ -453,18 +455,7 @@ form input,textarea,button{
 form{
     margin-left: 30px;
 }
-form button{
-    background-color: blue;
-    font-weight: bolder;
-    color: white;
-    width: 100px;
-    height: 30px;
-    border: none;
-    float: center;
-    border-radius:20px;
-}
-form button:hover{opacity: 2;
-}
+
 .projects{
     display:grid;
     height:300px;
@@ -517,21 +508,28 @@ form button:hover{opacity: 2;
    
     
 } */
-@media screen and (max-width:1000px){
-    header{padding:0 30px;}
-    
+p{
+font-family:Georgia, 'Times New Roman', Times, serif;
+ font-size: large;
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:800px){
+    .edtab{
+        flex-direction: column;
+    }
     .editems{
-        height: 200px;
-        width: 200px;
+        height: 120px;
+        width: 450px;
        }
-       .editems1{
-        height: 400px;
-        width: 350px;
+       .editems1 {
+        text-align: center;
+        height: 300px;
+        width: 450px;
        }
-}
-@media screen and (max-width:1000px){
+       .editems1 p{
+        margin-left: 90px;
+       }
+    header{padding:0 50px;}
+
     .ham{
         display: block;
     }
@@ -544,7 +542,9 @@ form button:hover{opacity: 2;
         background: white;
         padding: 30px;
     }
-    
+    .about-me{
+        margin-left: 50vh;
+    }
     header nav ul{
         display: block;
         
@@ -573,6 +573,14 @@ form button:hover{opacity: 2;
     
     .intro{
         margin-left: 0px;
+    }
+    p{
+        margin-right: 350px;
+        font-size: 15px;
+        width: 250px;
+    }
+    .contact{
+ margin-left: 40px;
     }
 }
 /*RESPONSIVE DESIGN*/
