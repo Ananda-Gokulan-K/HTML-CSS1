@@ -132,17 +132,32 @@
     
     <div class="contact">
         <h2 id="contact">Get In Touch</h2>
-        <form>
+        <form onsubmit="sendEmail(); reset(); return false;">
             <input type="text" placeholder="Your Name"><br><br>
-            <input type="email" placeholder="E-mail"><br><br>
+            <input type="email" id="email" placeholder="E-mail"><br><br>
             <textarea name="message" rows="6" cols="50" placeholder="Message"></textarea>
             <br><br>
             <a href="#"><button>Submit</button></a>
         </form>
     </div><br><br><br><br>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail()
+        {
+            Email.send({
+                secureToken: "9f4dcd95-805d-4132-8532-b77ee373657b",
+                To : 'anandagokulan3@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New HR enquiry",
+                Body : "And this is the body"
+            }).then(
+              message => alert(message)
+            );
+        }
+    </script>
 </body>
 <footer class="footer">
-    <div class="foot">Copyrighted to me @ reserved 2024<br><br><br></div>
+    <div class="foot">Copyrighted to Ananda-Gokulan-K @ reserved 2024<br><br><br></div>
     <div class="foot_flex">
         <div class="touch">STAY CONNECTED</div>
         <div class="symbol"><a href="https://www.linkedin.com/in/ananda-gokulan-412902225/" target="_blank">
