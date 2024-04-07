@@ -132,29 +132,32 @@
     
     <div class="contact">
         <h2 id="contact">Get In Touch</h2>
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <input type="text" placeholder="Your Name"><br><br>
-            <input type="email" id="email" placeholder="E-mail"><br><br>
-            <textarea name="message" rows="6" cols="50" placeholder="Message"></textarea>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="9f56cf2c-b2f6-403c-a72f-130d04a862f3">
+            <input type="text"name="name"  placeholder="Your Name"><br><br>
+            <input type="email" name="email" placeholder="E-mail"><br><br>
+            <textarea name="message" id="message" rows="6" cols="50" placeholder="Message"></textarea>
             <br><br>
             <a href="#"><button>Submit</button></a>
         </form>
     </div><br><br><br><br>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function sendEmail()
         {
             Email.send({
-                secureToken: "9f4dcd95-805d-4132-8532-b77ee373657b",
+                SecureToken: "9f4dcd95-805d-4132-8532-b77ee373657b",
                 To : 'anandagokulan3@gmail.com',
                 From : document.getElementById("email").value,
                 Subject : "New HR enquiry",
-                Body : "And this is the body"
+                Body : "Name: "+document.getElementById("name").value
+                +"<br> Email: "+document.getElementById("email").value
+                +"<br> Message:"+document.getElementById("message").value
             }).then(
-              message => alert(message)
+              message => alert("message sent successfully")
             );
         }
-    </script>
+    </script> -->
 </body>
 <footer class="footer">
     <div class="foot">Copyrighted to Ananda-Gokulan-K @ reserved 2024<br><br><br></div>
